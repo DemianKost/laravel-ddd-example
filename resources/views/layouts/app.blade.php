@@ -13,6 +13,8 @@
         @livewireScripts
     </head>
     <body>
-        @yield('content')
+        {{ $slot }}
+
+        @livewire('livewire-ui-spotlight')
     </body>
 </html>

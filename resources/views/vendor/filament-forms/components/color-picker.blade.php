@@ -81,7 +81,7 @@
                 <div
                     x-bind:style="{ 'background-color': state }"
                     x-bind:class="{
-                        'ring-1 ring-inset ring-gray-200 dark:ring-white/10': ! state,
+                        'ring-1 ring-inset ring-gray-200': ! state,
                     }"
                     class="h-5 w-5 rounded-full"
                 ></div>

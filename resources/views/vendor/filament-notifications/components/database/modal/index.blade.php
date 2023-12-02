@@ -39,15 +39,15 @@
 
         <div
             @class([
-                '-mx-6 -mt-6 divide-y divide-gray-200 dark:divide-white/10',
+                '-mx-6 -mt-6 divide-y divide-gray-200',
                 '-mb-6' => ! $isPaginated,
-                'border-b border-gray-200 dark:border-white/10' => $isPaginated,
+                'border-b border-gray-200' => $isPaginated,
             ])
         >
             @foreach ($notifications as $notification)
                 <div
                     @class([
-                        'relative before:absolute before:start-0 before:h-full before:w-0.5 before:bg-primary-600 dark:before:bg-primary-500' => $notification->unread(),
+                        'relative before:absolute before:start-0 before:h-full before:w-0.5 before:bg-primary-600' => $notification->unread(),
                     ])
                 >
                     {{ $this->getNotification($notification)->inline() }}

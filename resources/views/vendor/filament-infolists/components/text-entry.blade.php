@@ -85,7 +85,7 @@
                                 $weight = $getWeight($state);
 
                                 $proseClasses = \Illuminate\Support\Arr::toCssClasses([
-                                    'prose max-w-none dark:prose-invert [&>*:first-child]:mt-0 [&>*:last-child]:mb-0',
+                                    'prose max-w-none [&>*:first-child]:mt-0 [&>*:last-child]:mb-0',
                                     'pt-2' => ! $isLabelHidden(),
                                     match ($size) {
                                         TextEntrySize::ExtraSmall, 'xs' => 'prose-xs',
@@ -99,7 +99,7 @@
                                 $iconClasses = \Illuminate\Support\Arr::toCssClasses([
                                     'fi-in-text-item-icon h-5 w-5 shrink-0',
                                     match ($iconColor) {
-                                        'gray', null => 'text-gray-400 dark:text-gray-500',
+                                        'gray', null => 'text-gray-400',
                                         default => 'text-custom-500',
                                     },
                                 ]);
@@ -171,9 +171,9 @@
                                                     default => $size,
                                                 },
                                                 match ($color) {
-                                                    null => 'text-gray-950 dark:text-white',
-                                                    'gray' => 'text-gray-500 dark:text-gray-400',
-                                                    default => 'text-custom-600 dark:text-custom-400',
+                                                    null => 'text-gray-950',
+                                                    'gray' => 'text-gray-500',
+                                                    default => 'text-custom-600',
                                                 },
                                                 match ($weight) {
                                                     FontWeight::Thin, 'thin' => 'font-thin',
@@ -240,7 +240,7 @@
                                 </x-filament::link>
                             @else
                                 <span
-                                    class="text-sm text-gray-500 dark:text-gray-400"
+                                    class="text-sm text-gray-500"
                                 >
                                     {{ trans_choice('filament-infolists::components.entries.text.more_list_items', $limitedArrayStateCount) }}
                                 </span>

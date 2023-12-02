@@ -202,14 +202,14 @@
 
                         <div class="grid text-sm leading-6">
                             <span
-                                class="fi-fo-checkbox-list-option-label font-medium text-gray-950 dark:text-white"
+                                class="fi-fo-checkbox-list-option-label font-medium text-gray-950"
                             >
                                 {{ $label }}
                             </span>
 
                             @if ($hasDescription($value))
                                 <p
-                                    class="fi-fo-checkbox-list-option-description text-gray-500 dark:text-gray-400"
+                                    class="fi-fo-checkbox-list-option-description text-gray-500"
                                 >
                                     {{ $getDescription($value) }}
                                 </p>
@@ -228,7 +228,7 @@
             <div
                 x-cloak
                 x-show="search && ! visibleCheckboxListOptions.length"
-                class="fi-fo-checkbox-list-no-search-results-message text-sm text-gray-500 dark:text-gray-400"
+                class="fi-fo-checkbox-list-no-search-results-message text-sm text-gray-500"
             >
                 {{ $getNoSearchResultsMessage() }}
             </div>

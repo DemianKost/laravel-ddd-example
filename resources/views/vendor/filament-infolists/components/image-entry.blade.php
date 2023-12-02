@@ -18,7 +18,7 @@
         }
 
         $ringClasses = \Illuminate\Support\Arr::toCssClasses([
-            'ring-white dark:ring-gray-900',
+            'ring-white',
             match ($ring) {
                 0 => null,
                 1 => 'ring-1',
@@ -93,7 +93,7 @@
                             @if ($width) width: {{ $width }}; @endif
                         "
                         @class([
-                            'flex items-center justify-center bg-gray-100 font-medium text-gray-500 dark:bg-gray-800 dark:text-gray-400',
+                            'flex items-center justify-center bg-gray-100 font-medium text-gray-500',
                             'rounded-full' => $isCircular,
                             $limitedRemainingTextSizeClasses,
                             $ringClasses,
@@ -113,7 +113,7 @@
             @if ($hasLimitedRemainingText && ($loop->iteration < count($limitedState)) && ($isLimitedRemainingTextSeparate || (! $isCircular)))
                 <div
                     @class([
-                        'font-medium text-gray-500 dark:text-gray-400',
+                        'font-medium text-gray-500',
                         $limitedRemainingTextSizeClasses,
                     ])
                 >

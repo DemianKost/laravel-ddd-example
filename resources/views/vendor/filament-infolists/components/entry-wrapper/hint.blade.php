@@ -18,7 +18,7 @@
                 'fi-in-entry-wrp-hint-label',
                 match ($color) {
                     'gray' => 'fi-color-gray text-gray-500',
-                    default => 'fi-color-custom text-custom-600 dark:text-custom-400',
+                    default => 'fi-color-custom text-custom-600',
                 },
             ])
             @style([
@@ -41,8 +41,8 @@
             @class([
                 'fi-in-entry-wrp-hint-icon h-5 w-5',
                 match ($color) {
-                    'gray' => 'text-gray-400 dark:text-gray-500',
-                    default => 'text-custom-500 dark:text-custom-400',
+                    'gray' => 'text-gray-400',
+                    default => 'text-custom-500',
                 },
             ])
             @style([

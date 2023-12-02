@@ -1,5 +1,5 @@
 <x-layouts.app>
     <div class="container mx-auto">
-        <h2>Testing livewire</h2>
+        testing
     </div>
 </x-layouts.app>

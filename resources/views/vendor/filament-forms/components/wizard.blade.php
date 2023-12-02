@@ -94,7 +94,7 @@
             ->merge($getExtraAlpineAttributes(), escape: false)
             ->class([
                 'fi-fo-wizard',
-                'fi-contained rounded-xl bg-white shadow-sm ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10' => $isContained,
+                'fi-contained rounded-xl bg-white shadow-sm ring-1 ring-gray-950/5' => $isContained,
             ])
     }}
 >
@@ -116,9 +116,9 @@
         @endif
         role="list"
         @class([
-            'fi-fo-wizard-header grid divide-y divide-gray-200 dark:divide-white/5 md:grid-flow-col md:divide-y-0',
-            'border-b border-gray-200 dark:border-white/10' => $isContained,
-            'rounded-xl bg-white shadow-sm ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10' => ! $isContained,
+            'fi-fo-wizard-header grid divide-y divide-gray-200 md:grid-flow-col md:divide-y-0',
+            'border-b border-gray-200' => $isContained,
+            'rounded-xl bg-white shadow-sm ring-1 ring-gray-950/5' => ! $isContained,
         ])
     >
         @foreach ($getChildComponentContainer()->getComponents() as $step)
@@ -134,12 +134,12 @@
                     <div
                         class="fi-fo-wizard-header-step-icon-ctn flex h-10 w-10 shrink-0 items-center justify-center rounded-full"
                         x-bind:class="{
-                            'bg-primary-600 dark:bg-primary-500':
+                            'bg-primary-600':
                                 getStepIndex(step) > {{ $loop->index }},
                             'border-2': getStepIndex(step) <= {{ $loop->index }},
-                            'border-primary-600 dark:border-primary-500':
+                            'border-primary-600':
                                 getStepIndex(step) === {{ $loop->index }},
-                            'border-gray-300 dark:border-gray-600':
+                            'border-gray-300':
                                 getStepIndex(step) < {{ $loop->index }},
                         }"
                     >
@@ -158,8 +158,8 @@
                                 x-show="getStepIndex(step) <= {{ $loop->index }}"
                                 class="fi-fo-wizard-header-step-icon h-6 w-6"
                                 x-bind:class="{
-                                    'text-gray-500 dark:text-gray-400': getStepIndex(step) !== {{ $loop->index }},
-                                    'text-primary-600 dark:text-primary-500': getStepIndex(step) === {{ $loop->index }},
+                                    'text-gray-500': getStepIndex(step) !== {{ $loop->index }},
+                                    'text-primary-600': getStepIndex(step) === {{ $loop->index }},
                                 }"
                             />
                         @else
@@ -167,9 +167,9 @@
                                 x-show="getStepIndex(step) <= {{ $loop->index }}"
                                 class="text-sm font-medium"
                                 x-bind:class="{
-                                    'text-gray-500 dark:text-gray-400':
+                                    'text-gray-500':
                                         getStepIndex(step) !== {{ $loop->index }},
-                                    'text-primary-600 dark:text-primary-500':
+                                    'text-primary-600':
                                         getStepIndex(step) === {{ $loop->index }},
                                 }"
                             >
@@ -183,11 +183,11 @@
                             <span
                                 class="fi-fo-wizard-header-step-label text-sm font-medium"
                                 x-bind:class="{
-                                    'text-gray-500 dark:text-gray-400':
+                                    'text-gray-500':
                                         getStepIndex(step) < {{ $loop->index }},
-                                    'text-primary-600 dark:text-primary-400':
+                                    'text-primary-600':
                                         getStepIndex(step) === {{ $loop->index }},
-                                    'text-gray-950 dark:text-white': getStepIndex(step) > {{ $loop->index }},
+                                    'text-gray-950': getStepIndex(step) > {{ $loop->index }},
                                 }"
                             >
                                 {{ $step->getLabel() }}
@@ -196,7 +196,7 @@
 
                         @if (filled($description = $step->getDescription()))
                             <span
-                                class="fi-fo-wizard-header-step-description text-sm text-gray-500 dark:text-gray-400"
+                                class="fi-fo-wizard-header-step-description text-sm text-gray-500"
                             >
                                 {{ $description }}
                             </span>
@@ -213,7 +213,7 @@
                             fill="none"
                             preserveAspectRatio="none"
                             viewBox="0 0 22 80"
-                            class="h-full w-full text-gray-200 rtl:rotate-180 dark:text-white/5"
+                            class="h-full w-full text-gray-200 rtl:rotate-180"
                         >
                             <path
                                 d="M0 -2L20 40L0 82"

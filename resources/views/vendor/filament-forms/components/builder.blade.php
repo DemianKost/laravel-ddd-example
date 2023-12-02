@@ -114,7 +114,7 @@
                             })
                         "
                         x-sortable-item="{{ $uuid }}"
-                        class="fi-fo-builder-item rounded-xl bg-white shadow-sm ring-1 ring-gray-950/5 dark:bg-white/5 dark:ring-white/10"
+                        class="fi-fo-builder-item rounded-xl bg-white shadow-sm ring-1 ring-gray-950/5"
                         x-bind:class="{ 'fi-collapsed overflow-hidden': isCollapsed }"
                     >
                         @if ($isReorderableWithDragAndDrop || $isReorderableWithButtons || $hasBlockLabels || $isCloneable || $isDeletable || $isCollapsible || count($visibleExtraItemActions))
@@ -147,7 +147,7 @@
                                             x-on:click.stop="isCollapsed = !isCollapsed"
                                         @endif
                                         @class([
-                                            'text-sm font-medium text-gray-950 dark:text-white',
+                                            'text-sm font-medium text-gray-950',
                                             'truncate' => $isBlockLabelTruncated(),
                                             'cursor-pointer select-none' => $isCollapsible,
                                         ])
@@ -210,7 +210,7 @@
 
                         <div
                             x-show="! isCollapsed"
-                            class="fi-fo-builder-item-content border-t border-gray-100 p-4 dark:border-white/10"
+                            class="fi-fo-builder-item-content border-t border-gray-100 p-4"
                         >
                             {{ $item }}
                         </div>
@@ -223,7 +223,7 @@
                                     class="flex w-full justify-center opacity-0 transition duration-75 hover:opacity-100"
                                 >
                                     <div
-                                        class="fi-fo-builder-block-picker-ctn rounded-lg bg-white dark:bg-gray-900"
+                                        class="fi-fo-builder-block-picker-ctn rounded-lg bg-white"
                                     >
                                         <x-filament-forms::builder.block-picker
                                             :action="$addBetweenAction"
@@ -242,7 +242,7 @@
                             </li>
                         @elseif (filled($labelBetweenItems = $getLabelBetweenItems()))
                             <li
-                                class="relative border-t border-gray-200 dark:border-white/10"
+                                class="relative border-t border-gray-200"
                             >
                                 <span
                                     class="absolute -top-3 left-3 px-1 text-sm font-medium"

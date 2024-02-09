@@ -15,6 +15,7 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         @livewireScripts
+        @filamentStyles
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
@@ -33,7 +34,8 @@
             <main>
                 {{ $slot }}
             </main>
-
+            
+            @filamentScripts
             @livewire('livewire-ui-spotlight')
         </div>
     </body>
